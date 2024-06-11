@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  puppeteer:
+    image: gotom/newshot
+    volumes:
+      - ./screenshots:/home/pptruser/screenshots
+      - ./tools:/home/pptruser/tools
+    environment:
+      - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
