@@ -68,7 +68,7 @@ let filename = `full_screenshot_${width}_${height}.png`;
         isMobile
     });
 
-    await page.goto(url, {waitUntil: 'networkidle2'});
+    await page.goto(url, {waitUntil: 'networkidle2', timeout: 80000 });
 
     await sleep(delay);
 

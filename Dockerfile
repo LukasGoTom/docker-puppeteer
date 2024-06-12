@@ -8,3 +8,9 @@ ENV APPLICATION_USER=pptruser \
 COPY tools tools
 
 RUN mkdir screenshots
+RUN chown -R pptruser:pptruser screenshots
+
+ENTRYPOINT ["/usr/bin/tini", "--"]
+
+# Keep the container running
+CMD ["tail", "-f", "/dev/null"]

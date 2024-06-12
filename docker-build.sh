@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t gotom/newshot .
+docker build --no-cache -t gotom/newshot .
